@@ -1,0 +1,6 @@
+version: '3'
+services:
+  agent:
+    image: yourrepo/shade-agent:latest
+    ports:
+      - "3000:3000"

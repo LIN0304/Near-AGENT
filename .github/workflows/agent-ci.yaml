@@ -1,0 +1,18 @@
+name: Agent CI
+on:
+  push:
+    paths:
+      - 'agent/**'
+  pull_request:
+    paths:
+      - 'agent/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm test --prefix agent
