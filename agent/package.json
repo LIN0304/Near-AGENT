@@ -3,5 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "ethers": "^6.6.0",
+    "zod": "^3.22.0"
   }
 }

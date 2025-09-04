@@ -1,18 +1,21 @@
 name: Agent CI
+
 on:
   push:
     paths:
       - 'agent/**'
+      - '.github/workflows/agent-ci.yaml'
   pull_request:
     paths:
       - 'agent/**'
+      - '.github/workflows/agent-ci.yaml'
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - run: npm test --prefix agent
+      - name: Run tests
+        run: |
+          cd agent
+          npm test

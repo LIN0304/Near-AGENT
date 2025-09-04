@@ -1,0 +1,6 @@
+{
+  "chains": ["ethereum"],
+  "contracts": [],
+  "dailySpendLimit": 0,
+  "txRateLimit": 0
+}
