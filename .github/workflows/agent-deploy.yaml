@@ -1,4 +1,5 @@
-name: Deploy Agent
+name: Agent Deploy
+
 on:
   workflow_dispatch:
 
@@ -6,4 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploy placeholder"
+      - uses: actions/checkout@v3
+      - name: Deploy placeholder
+        run: echo 'Deploy step'
